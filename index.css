@@ -1,0 +1,1610 @@
+@charset "UTF-8";
+*{margin: 0; padding: 0;}
+ul{list-style: none;}
+a{
+    text-decoration: none;
+    color: #000;
+}
+body{
+    font-family: "Noto Sans KR", sans-serif;
+    font-optical-sizing: auto;
+    font-weight:400;
+    font-style: normal;
+}
+
+.clearFix:after{
+    content: ""; display: block; clear: both;
+}
+
+#header{
+    width:100%;
+    height:72px;
+    background-color: #17212A;
+    position: fixed;
+    top:0; left:0;
+    z-index: 9999;
+}
+#header .icu{
+    width:90%;
+    margin: 0 auto;
+    /* position: relative; */
+    display: flex;
+    justify-content: space-between;
+    /* border:1px solid white; */
+    
+}
+#header .icu .logo{
+    margin-top: 14px;
+    /* margin-right: 500px; */
+    margin-left: 10px;
+    cursor: pointer;
+}
+#header .icu .gnb{
+    width:40%;
+    height:72px;
+    font-size: 1em;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    top:0; left:50%;
+    transform: translateX(-50%);
+    /* border:1px solid red; */
+}
+#header .icu .gnb>li{
+    width: 130px;
+    margin-left: 20px;
+    white-space: nowrap;
+    /* margin: 0 15px; */
+    /* width:auto; */
+}
+#header .icu .gnb>li:hover a{
+    color:#FFE37F;
+}
+#header .icu a{
+    color:white;
+}
+#header .icu .r_menu{
+    width:8%;
+    height:72px;
+    line-height: 72px;
+    cursor: pointer;
+    /* border:1px solid red; */
+    /* display: flex; */
+    float:right;
+    margin-right: 10px;
+}
+#header .icu .r_menu span{
+    /* display: inline-block; */
+    float:left;
+    margin-right: 6%;
+    color:white;
+    font-size: 24px;
+    line-height: 72px;
+}
+#header .icu .r_menu p{
+    font-size: 14px;
+}
+#header .hide{
+    width:44px;
+    height:44px;
+    border: 1px solid gray;
+    box-sizing: border-box;
+    border-radius: 10px;
+    display:none;
+    color:#fff;
+    text-align: center;
+    margin-top: 10px;
+}
+#header .hide span{
+    font-size: 36px;
+    line-height: 44px;
+}
+/* ------------메인----------- */
+#section{
+    width:100%;
+    height:100%;
+    position: relative;
+    font-family: "Noto Sans KR", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+#section #main{
+    width:100%;
+    height:100vh;
+    position: relative;
+    background-color: #F8F9FA;
+}
+#section #main .carousel>ul>li .m_text{
+    position: absolute;
+    top:25%; left:50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+/* #section #main::before{
+    content: ""; display: block;
+    width:50%;
+    height:92.5vh;
+    background-image: url(images/house.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    opacity: 0.4;
+} */
+/* #section #main .pictures{
+    width:1350px;
+    height:800px;
+} */
+#section #main .panel{
+    height:100vh;
+    position: relative;
+}
+#section #main .panel li{
+    width:100%;
+    height:100vh;
+    display: none;
+    position: absolute;
+    left:0; top:0;
+
+}
+#section #main .panel li.active{display: block;}
+
+#section #main .panel li .m_p{
+    width:100%;
+    height:100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+}
+#section #main .panel li .m_pic1{
+    background-image: url(images/123.png);
+    background-position:70%;
+}
+#section #main .panel li .m_pic2{    
+    background-image: url(images/food3.png);
+}
+#section #main .panel li .m_pic3{
+    background-image: url(images/prayer2.png);
+    background-position:25%;
+}
+
+
+
+#section #main .m_text{
+    width:50%;
+}
+#section #main .m_text h1{
+    font-size: 60px;
+    margin-bottom: 3%;
+    font-family: "Noto Sans KR", sans-serif;
+    font-optical-sizing: auto;
+    font-weight:400;
+    font-style: normal;
+    color:#fff;
+    text-shadow: 0 0 10px #00000075;
+    /* background: linear-gradient(to right, rgb(0,0,0), rgb(185, 185, 185)); */
+    background-clip: text;
+    
+}
+#section #main .m_text p{
+    width: 100%; height: 10%;
+    line-height: 60px;
+    font-size: 48px;
+    letter-spacing: -1px;
+    font-weight: bold;
+    margin-bottom: 80px;
+    text-shadow: 0 0 10px #00000075;
+    color:#f3f2f2af;
+    font-family: "Noto Sans KR", sans-serif;
+    font-optical-sizing: auto;
+    font-weight:400;
+    font-style: normal;
+}
+#section #main .m_text .btn1{
+    width:8vw;
+    height:6vh;
+    background-color: #fcd858;
+    line-height: 6vh;
+    text-align: center;
+    border-radius: 30px;
+    font-size: 24px;
+    font-weight: normal;
+    margin: 0px auto;
+    /* border:1px solid #F8F9FA; */
+    box-shadow: 0px 0px 3px #00000050;
+    /* font-weight: bold; */
+}
+#section #main .m_text .btn1:hover{
+    background-color: #fdc90e;
+}
+#section #main .m_text .btn1 a{
+    color:#fff;
+}
+#section #main .m_btn{
+    width:100px;
+    /* height:50px; */
+    position: absolute;
+    bottom:20%; left:50%;
+    /* margin-left: -50px; */
+    transform: translateX(-50%);
+    z-index: 9999;
+    display: flex;
+    justify-content: space-between;
+    /* border:1px solid red; */
+}
+#section #main .m_btn>li{
+    width:18px;
+    height:18px;
+    border-radius: 50%;
+    cursor: pointer;
+    /* float:left; */
+    /* margin-right: 10px; */
+    background-color: #f3f2f2af;
+}
+#section #main .m_btn>li.ok{
+    width:40px;
+    height:18px;
+    border-radius: 50px;
+    background-color: #fcd858;
+}
+#section #main .navigation_bar{
+    width:90%;
+    height:18vh;
+    background-color: #ffffffa1;
+    position: absolute;
+    bottom:0; left:50%;
+    transform: translate(-50%, 0%);
+    z-index: 999;
+    border-radius: 50px 50px 0 0;
+    box-shadow: 0 0 5px #00000050;
+}
+#section #main .navigation_bar .navigation_icons{
+    width:90%;
+    position:absolute;
+    left:50%; top:5%;
+    transform: translateX(-48%);
+    margin-top: 5px;
+}
+#section #main .navigation_bar .icon{
+    width:16%;
+    float:left;
+    cursor: pointer;
+}
+#section #main .navigation_bar .navigation_icons p{
+    font-size: 1.8vw;
+    font-weight: normal;
+    text-align: center;
+    /* margin-top: 5px; */
+    /* margin-bottom: 10px; */
+    color:#222;
+    font-family: "Dongle", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+#section #main .navigation_bar .icon .n_pic1{
+    width:80px;
+    height:80px;
+    background-image: url(images/icon1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0 auto;
+    transition: all 0.5s;
+}
+#section #main .navigation_bar .icon .n_pic2{
+    width:90px;
+    height:65px;
+    background-image: url(images/icon2.png);
+    background-repeat: no-repeat;
+    background-size: 95% 120%;
+    background-position: center;
+    /* border:1px solid red; */
+    margin: 0 auto;
+    margin-top: 12px;
+    transition: all 0.5s;
+}
+#section #main .navigation_bar .icon .n_pic3{
+    width:90px;
+    height:90px;
+    background-image: url(images/icon3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0 auto;
+    margin-top: -3px;
+    transition: all 0.5s;
+}
+#section #main .navigation_bar .icon .n_pic4{
+    width:90px;
+    height:90px;
+    background-image: url(images/icon4.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0px auto;
+    margin-top: -3px;
+    transition: all 0.5s;
+}
+#section #main .navigation_bar .icon .n_pic5{
+    width:90px;
+    height:90px;
+    background-image: url(images/icon5.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0 auto;
+    transition: all 0.5s;
+}
+#section #main .navigation_bar .icon .n_pic6{
+    width:90px;
+    height:90px;
+    background-image: url(images/icon6.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0 auto;
+    margin-top: -3px;
+    transition: all 0.5s;
+}
+#section #main .navigation_bar .icon .n_pic1:hover{
+    transform: scale(1.1);
+}
+#section #main .navigation_bar .icon .n_pic2:hover{
+    transform: scale(1.1);
+}
+#section #main .navigation_bar .icon .n_pic3:hover{
+    transform: scale(1.1);
+}
+#section #main .navigation_bar .icon .n_pic4:hover{
+    transform: scale(1.1);
+}
+#section #main .navigation_bar .icon .n_pic5:hover{
+    transform: scale(1.1);
+}
+#section #main .navigation_bar .icon .n_pic6:hover{
+    transform: scale(1.1);
+}
+#section #main .number {
+    position: fixed;
+    top: 50%; right: 5%;
+    z-index: 111111111111;
+    transform: translateY(-50%);
+    font-size: 36px;
+    font-weight: bold;
+    width: 100px;
+    font-family: "Dongle", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#section #main .number>li {
+    width: 200px;
+    height: 80px;
+    text-align: center;
+    line-height: 60px;
+    /* border:1px solid red; */
+    cursor: pointer;
+}
+
+#section #main .number>li a {
+    color: #ffffff;
+    text-shadow: 0 0 3px #00000091;
+    text-decoration: underline;
+    /* transition: all 0.2s; */
+}
+
+#section #main .number>li:hover a{
+    color: #fcd858e5;
+    text-shadow: none;
+    border-bottom: 1px solid transparent;
+}
+#section #main .number>li:hover a span{
+    
+    display: block;
+    display: inline-block;
+}
+#section #main .number>li span{
+    font-size: 30px;
+    display: none;
+}
+#section #main .number>li>a.on{
+    color: #ffc800;
+    text-shadow: none;
+    font-weight: normal;
+}
+#section #main .number>li>a.on span{
+    display: inline-block;
+    
+}
+/* ------------1번째 컨텐츠----------- */
+#section #tour_reserv{
+    width:100%;
+    height:100vh;
+    /* background-color: #399cff; */
+    position: relative;
+    overflow: hidden;
+    background-color: #F8F9FA;
+    /* border:1px solid blue; */
+}
+#section #tour_reserv .t_title{
+    width:32%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    text-align: center;
+    margin-top: 50px;
+    /* border:1px solid red; */
+}
+#section #tour_reserv .t_title h2{
+    font-size: 3.2vw;
+    position: relative;
+}
+#section #tour_reserv .t_title h2:after{
+    content: "";
+    display: block;
+    width: 60px; height: 60px;
+    background-repeat: no-repeat;
+    background-image: url(images/flag.png);
+    background-size: cover;
+    position: absolute;
+    right:-20px; top:10px;
+    animation: flag 2s infinite;
+    transform-origin: left top;
+}
+
+#section #tour_reserv .detail{
+    font-size: 24px;
+    font-weight: normal;
+    text-align: center;
+    color:#999;
+    margin-bottom: 80px;
+    font-style: italic;
+}
+#section #tour_reserv .l_btn{
+    width:60px;
+    height:60px;
+    border-radius: 50%;
+    background-color: #76767672;
+    text-align: center;
+    line-height: 60px;
+    position: absolute;
+    top:50%; left:9%;
+    z-index: 100;
+    color:#fff;
+    font-size: 28px;
+    cursor: pointer;
+}
+#section #tour_reserv .r_btn{
+    width:60px;
+    height:60px;
+    border-radius: 50%;
+    background-color: #76767672;
+    text-align: center;
+    line-height: 60px;
+    position: absolute;
+    top:50%; right:10%;
+    z-index: 100;
+    color:#fff;
+    font-size: 28px;
+    cursor: pointer;
+}
+#section #tour_reserv .r_btn:hover{
+    background-color: #fff;
+    color:#999;
+}
+#section #tour_reserv .l_btn:hover{
+    background-color: #fff;
+    color:#999;
+}
+#section #tour_reserv .caousel2{
+    width: 100%;
+    height: 630px;
+    position: relative;
+    overflow: hidden;
+}
+#section #tour_reserv .tour{
+    width:800%;
+    height:630px;
+    display: flex;
+    margin-left: -630px;
+    /* overflow: hidden; */
+}
+#section #tour_reserv .tour>li{
+    flex:0 0 auto;
+    /* float: left; */
+    margin: 0 15px;
+    /* margin: 0 0.78125%; */
+    
+    border-radius: 10px;
+    overflow: hidden;
+    height: 560px;
+    width: 420px;
+    /* width: 21.875%; */
+    box-shadow: 0px 10px 10px #00000010;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    /* border:1px solid red; */
+}
+#section #tour_reserv .tour>li p span{
+    display: none;
+    position: absolute;
+    top:50%; left:50%;
+    transform: translate(-50%, -50%);
+    z-index: 999999999;
+    text-align: center;
+    font-size: 36px;
+    color:#fff;
+    /* border:1px solid red; */
+}
+#section #tour_reserv .tour .down{
+    transform: translateY(8%);
+}
+
+#section #tour_reserv .tour>li h3{
+    font-size: 25px;
+    color: #17212A;
+    margin-top: 5%;
+}
+#section #tour_reserv .tour>li span{
+    /* display: inline-block; */
+    margin-top: 3%;
+    font-size: 18px;
+    font-weight: normal;
+    color: #999;
+}
+#section #tour_reserv .carousel2 .tour>li p{
+    overflow: hidden;
+    text-align: center;
+}
+
+#section #tour_reserv .tour>li img{
+    transition: all 0.8s;
+    width: 420px;
+    height: 420px;
+}
+#section #tour_reserv .tour>li img:hover{
+    transform: scale(1.1);
+    transition: all 0.5s;
+}
+
+/* ------------2번째 컨텐츠------------ */
+#section #travel_news{
+    width:100%;
+    height:100vh;
+    /* background-color: red; */
+}
+#section #travel_news .t_title{
+    width:20%;
+    margin: 0 auto;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 50px;
+    text-align: center;
+    /* border:1px solid red; */
+}
+#section #travel_news .t_title h2{
+    /* width:400px; */
+    font-size: 3.2vw;
+    position: relative;
+    /* border:1px solid blue; */
+}
+#section #travel_news .t_title h2:after{
+        content: "";
+        display: block;
+        width: 60px; height: 60px;
+        background-repeat: no-repeat;
+        background-image: url(images/newspaper.png);
+        background-size: cover;
+        position: absolute;
+        right:-50px; top:10px;
+        animation: paper 1.5s infinite;
+        /* border:1px solid green; */
+}
+#section #travel_news .detail{
+    text-align: center;
+    font-size: 24px;
+    font-weight: normal;
+    color:#999;
+    margin: 0 auto;
+    font-style: italic;
+    margin-bottom: 40px;
+}
+#section #travel_news .btn2{
+    width:32%;
+    
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    /* border:1px solid red; */
+    margin-bottom: 40px;
+}
+#section #travel_news .btn2>li{
+    width:160px;
+    height:60px;
+    background-color: #fcd858;
+    border-radius: 50px;
+    line-height: 60px;
+    color:white;
+    text-align: center;
+    font-size: 1vw;
+    font-weight: normal;
+    cursor: pointer;
+    /* float:left; */
+}
+#section #travel_news .btn2>.on{
+    background-color: #ffc801;
+}
+#section #travel_news .article{
+    width:1000px;
+    /* height:64vh; */
+    margin: 0 auto;
+    position: relative;
+    
+}
+#section #travel_news .article>ul{
+    width:100%;
+    position:absolute;
+    top:0; left:0;
+}
+#section #travel_news .article ul>li{
+    width:100%;
+    height:40%;
+    border-radius: 10px;
+    /* box-shadow: 2px 2px 2px #17212a50; */
+    border:1px solid #aaaaaa80;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: -1;
+    overflow:hidden;
+    font-family: "Nanum Pen Script";
+    font-weight: 400;
+    font-style: normal;
+}
+#section #travel_news .article>ul>li .c_text{
+    float:left;
+}
+#section #travel_news .article>ul>li h3{
+    font-size: 4.2vh;
+    transform: translate(50px, 30px);
+    /* line-height: 36px; */
+    margin-bottom: 10px;
+}
+#section #travel_news .article>ul>li p{
+    font-size: 3vh;
+    font-weight: normal;
+    color:#767676;
+    line-height: 3.6vh;
+    letter-spacing: -1;
+    transform: translate(50px, 40px);
+}
+#section #travel_news .article>ul>li .read{
+    width:135px;
+    font-size: 20px;
+    font-weight: lighter;
+    color:#999999;
+    position: absolute;
+    bottom:18%; right:6%;
+    text-decoration: underline;
+    cursor: pointer;
+}
+#section #travel_news .article>ul>li .mouse{
+    overflow: hidden;
+    float:left;
+}
+#section #travel_news .article>ul>li img{
+    width:320px;
+    height:280px;
+    transition: all 0.5s;
+    float:left;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+#section #travel_news .article>ul>li img:hover{
+    transform: scale(1.1);
+    overflow: hidden;
+}
+#section #travel_news .article>.off{display:block}
+#section #travel_news .contents{display:none;}
+#section #travel_news .content2{display: none;}
+#section #travel_news .content3{display: none;}
+#section #travel_news .gotop{
+    width:80px;
+    height:80px;
+    background-image: url(images/gotop2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    bottom:5%; right:5%;
+    z-index: 9999999999999999999;
+    transition: all 0.3s;
+    /* display: none; */
+}
+#section #travel_news .gotop:hover{
+    background-image: url(images/gotop_hover.png);
+}
+
+/* ------------3번째 컨텐츠----------------- */
+#section #about_us{
+    width:100%;
+    height:100vh;
+    /* background-color: rgb(232, 135, 235); */
+    background-image: url(images/a_bgr.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#section #about_us .t_title{
+    width:16%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    text-align: center;
+    padding-top: 50px;
+    /* border:1px solid red; */
+}
+#section #about_us .t_title h2{
+    font-size: 3.2vw;
+    position: relative;
+    /* text-align: center; */
+}
+#section #about_us .t_title h2:after{
+    content: "";
+    display: block;
+    width: 60px; height: 60px;
+    background-repeat: no-repeat;
+    background-image: url(images/about.png);
+    background-size: cover;
+    position: absolute;
+    right:-45px; top:20px;
+    animation: question 2s infinite;
+    /* border:1px solid green; */
+}
+#section #about_us .detail{
+    text-align: center;
+    font-size: 24px;
+    font-weight: normal;
+    color:#999;
+    margin: 0 auto;
+    font-style: italic;
+    /* border:1px solid black; */
+} 
+
+
+
+#section .memory{
+    width:85%;
+    height:65vh;
+    margin: 100px auto;
+    display: flex;
+    position: relative;
+    /* border:1px solid red; */
+    /* transform: translateY(100px); */
+}
+#section .memory>li{
+    /* margin-right: 23px; */
+    text-align: center;
+    /* background-color: skyblue; */
+}
+#section .memory .a_cont1{
+    position: absolute;
+    bottom:30%; left:0;
+    /* transform: translate(-60px,60px); */
+}
+#section .memory h3{
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #17212A;
+    letter-spacing: -1px;
+}
+#section .memory p{
+    font-size: 16px;
+    color: #999;
+    margin-bottom: 20px;    
+}
+#section .memory .circle{
+    width:200px;
+    height:200px;
+    border-radius: 50%;
+    margin: 0 auto;
+    border:5px solid #E9ECEF;
+}
+#section .memory .a_cont1 .circle{
+    background-image: url(images/a_pic1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* transform: translateX(80px); */
+}
+#section .memory .a_cont2{
+    position: absolute;
+    bottom:28%; left:22%;
+}
+#section .memory .a_cont2 .circle{
+    background-image: url(images/a_pic2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* transform: translateX(80px); */
+}
+#section .memory .a_cont3 .circle{
+    background-image: url(images/a_pic3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* transform: translateX(50px); */
+}
+#section .memory .a_cont3{
+    position: absolute;
+    top:16%; right:32%;
+    /* border:1px solid red; */
+}
+#section .memory .a_cont4 .circle{
+    background-image: url(images/a_pic4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* transform: translateX(80px); */
+}
+#section .memory .a_cont4{
+    position: absolute;
+    top:0; right:8%;
+}
+#section .memory .a_cont5{
+    position: absolute;
+    bottom:0; right:0%;
+    /* border:1px solid red; */
+}
+#section .memory .circle5{
+    width:200px;
+    height:200px;
+    border-radius: 50%;
+    border:5px solid #E9ECEF;
+    background-color: #fcd858;
+    /* animation: spin 15s linear infinite; */
+}
+
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(359deg);
+    }
+}
+#section .memory .a_cont5 p{
+    font-size: 20px;
+    text-align: center;
+    padding-top: 56px;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+/* ----------4번째 컨텐츠---------- */
+#section #festival{
+    width:100%;
+    height:100vh;
+    position: relative;
+    /* background-color:skyblue; */
+}
+#section .backg{
+    width:100%;
+    height:100vh;
+    position: absolute;
+    top:0; left:0;
+    background-image: url(images/house.png);
+    background-repeat: no-repeat;
+    background-size: 100% 120%;
+    opacity: 0.3;
+    z-index: -1;
+}
+#section #festival .t_title{
+    width:13%;
+    margin: 0 auto;
+    padding-top: 50px;
+    box-sizing: border-box;
+    /* border:1px solid red; */
+}
+#section #festival .t_title h2{
+    font-size: 3.2vw;
+    position: relative;
+    /* border:1px solid blue; */
+}
+#section #festival .t_title h2:after{
+    content: "";
+    display: block;
+    width: 60px; height: 60px;
+    background-repeat: no-repeat;
+    background-image: url(images/festival.png);
+    background-size: cover;
+    position: absolute;
+    right:-50px; top:20px;
+    animation: balloon 3s infinite;
+    /* border:1px solid green; */
+}
+#section #festival  .detail{
+    text-align: center;
+    font-size: 24px;
+    font-weight: normal;
+    color:#999;
+    font-style: italic;
+    margin-bottom: 40px;
+    /* border:1px solid red; */
+} 
+#section #festival .f_cont{
+    width:1000px;
+    margin: 0px auto;
+    /* border:1px solid red; */
+}
+#section #festival .f_cont>ul{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+}
+#section #festival .f_cont>ul>li{
+    width:260px;
+    height:35vh;
+    background-color: #F8F9FA;
+    border-radius: 20px;
+    text-align: center;
+    /* margin-left: 120px; */
+    margin-bottom: 30px;
+    box-shadow: 0px 0px 10px #0000002c;
+    /* float:left; */
+}
+
+
+#section #festival .f_cont>ul>li h4{
+    font-size: 22px;
+    color: #17212A;
+}
+#section #festival .f_cont>ul>li p{
+    font-size: 16px;
+    font-weight: normal;
+    color:#666;
+}
+#section #festival .f_cont>ul>li .e_cont{
+    overflow: hidden;
+    border-radius: 20px 20px 0 0;
+}
+#section #festival .f_cont>ul>li .e_cont img{
+    width:250px;
+    height:210px;
+    border-radius: 20px 20px 0 0;
+    margin-bottom: 5px;
+    overflow: hidden;
+    transition: all 0.5s;
+    padding-top: 5px;
+    box-sizing: border-box;
+}
+/* #section #festival .f_cont>ul>li .e_cont img:hover{
+    transform: scale(1.05);
+} */
+#section #festival .f_cont>ul>li .linker{
+    width:70px; 
+    margin: 8px auto;
+    display: flex; 
+    /* justify-content: space-between; */
+    /* border:1px solid red; */
+}
+#section #festival .f_cont>ul>li .linker .insta img{
+    width:30px;
+    height:30px;
+    margin-right: 10px;
+}
+#section #festival .f_cont>ul>li .linker .global img{
+    width:30px;
+    height:30px;
+    /* margin-right: 10px; */
+}
+#footer{
+    width:100%;
+    height:350px;
+    background-color: #17212A;
+    color:white;
+    font-size: 14.4px;
+    position: relative;
+}
+#footer .total{
+    width:90%;
+    height:350px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    /* border:1px solid red; */
+}
+#footer .l_cont{
+    width:450px;
+    height:270px;
+    margin-top: 40px;
+}
+#footer .total .l_cont .business{
+    margin-bottom: 20px;
+}
+#footer .total .l_cont .business .company{
+    width:20px;
+    height:20px;
+    background-image: url(images/business.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    float:left;
+    margin-right: 10px;
+}
+#footer .total .l_cont .home{
+    margin-bottom: 20px;
+}
+#footer .total .l_cont .home .locate{
+    width:20px;
+    height:20px;
+    background-image: url(images/home.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    float:left;
+    margin-right: 10px;
+}
+#footer .total .l_cont .tele{
+    margin-bottom: 50px;
+}
+#footer .total .l_cont .tele .phone{
+    width:20px;
+    height:20px;
+    background-image: url(images/call.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    float:left;
+    margin-right: 10px;
+}
+#footer .total .l_cont p{
+    margin-bottom: 20px;
+}
+#footer .total .l_cont .logo2{
+    width:44px;
+    height:44px;
+    background-image: url(images/logo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 50px;
+}
+#footer .c_cont{
+    width:280px;
+    height:50px;
+    /* position: absolute;
+    bottom:0; left:50%;
+    transform: translateX(-50%,); */
+    /* margin: 0 auto; */
+}
+#footer .c_cont .f_icons{
+    width:280px;
+    height:50px;
+    display: flex;
+    margin: 250px auto;
+    position: absolute;
+    left:50%; margin-left:-140px;
+}
+#footer .c_cont>ul>li{
+    width:50px;
+    height:50px;
+}
+#footer .c_cont .f_icons .instagram{
+    width:50px;
+    height:50px;
+    background-image: url(images/instagram.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right: 20px;
+}
+#footer .c_cont .f_icons .facebook{
+    width:50px;
+    height:50px;
+    background-image: url(images/facebook.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right: 20px;
+}
+#footer .c_cont .f_icons .youtube{
+    width:50px;
+    height:50px;
+    background-image: url(images/youtube.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right: 20px;
+}
+#footer .c_cont .f_icons .tiktok{
+    width:50px;
+    height:50px;
+    background-image: url(images/tiktok.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right: 20px;
+}
+#footer .total .r_cont{
+    font-size: 14.4px;
+    margin-top: 270px;
+    /* border:1px solid blue; */
+    display: flex;
+    /* margin-right: 135px; */
+}
+#footer .total .r_cont p{
+    margin-right: 10px;
+    text-decoration: underline;
+}
+#footer .total .r_cont p a{
+    color:white;
+}
+
+/* -------------애니메이션 효과----------- */
+
+@keyframes flag{
+    0%{
+        transform: scaleX(1);
+    }
+    50%{
+        transform: scaleX(0.92);
+    }
+    100%{
+        transform: scaleX(1);
+    }
+}
+
+@keyframes paper{
+    0%{
+        transform: translateX(0px);
+    }
+    50%{
+        transform: translateX(8px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+
+@keyframes question{
+    0%{
+        transform: rotate(-45deg);
+    }
+    50%{
+        transform: rotate(45deg);
+    }
+    100%{
+        transform: rotate(-45deg);
+    }
+}
+
+@keyframes balloon{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-10px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+/* ----------반응형------------- */
+@media screen and (min-width:1701px)
+@media (min-width:1024px) and (max-width:1500px){
+    #header .icu .r_menu {
+        width: 130px;
+    }
+
+    /* --------섹션---------- */
+    section #main{
+        width:100%;
+        height:100vh;
+    }
+    #section #main .carousel>ul>li .m_text h1{
+        font-size: 3.2vw;
+    }
+    #section #main .carousel>ul>li .m_text p{
+        font-size: 2.8vw;
+        line-height: 6vh;
+        padding-left: 20px;
+    }
+    #section #main .carousel>ul>li .btn1{
+        font-size: 1.2vw;
+    }
+    #section #main .navigation_bar .navigation_icons .n_pic1{
+        width:70px;
+        height:70px;
+    }
+    #section #main .navigation_bar .navigation_icons .n_pic2{
+        width:70px;
+        height:56px;
+    }
+    #section #main .navigation_bar .navigation_icons .n_pic3{
+        width:75px;
+        height:75px;
+        margin-top: 3px;
+    }
+    #section #main .navigation_bar .navigation_icons .n_pic4{
+        width:70px;
+        height:70px;
+        margin-top: 5px;
+    }
+    #section #main .navigation_bar .navigation_icons .n_pic5{
+        width:70px;
+        height:70px;
+        margin-top: 5px;
+    }
+    #section #main .navigation_bar .navigation_icons .n_pic6{
+        width:70px;
+        height:70px;
+        margin-top: 3px;
+    }
+
+    /* ---------1번째 컨텐츠-------------- */
+    #section #tour_reserv{
+        width:100%;
+        height:100vh;
+    }
+    #section #tour_reserv .t_title{
+        /* width:35%; */
+        text-wrap: nowrap;
+        /* border:1px solid red; */
+    }
+    #section #tour_reserv .t_title h2:after{
+        display: none;
+    }
+    #section #tour_reserv .carousel2 .tour>li{
+        width:420px;
+        height:500px;
+    }
+    #section #tour_reserv .carousel2 .tour>li img{
+        width:420px;
+        height:360px;
+    }
+    /* ---------------2번째 컨텐츠-------------- */
+    #section #travel_news{
+        width:100%;
+        height:100vh;
+    }
+    #section #travel_news .t_title{
+        border:1px solid red;
+    }
+    #section #travel_news .t_title h2:after{
+        display: none;
+    }    
+    #section #travel_news .btn2>li{
+        width:9vw;
+        height:42px;
+        font-size: 1.2vw;
+        text-align: center;
+        line-height: 42px;
+    }
+    #section #travel_news .article>ul>li{
+        z-index: -1;
+    }
+    /* -----------3번째 컨텐츠---------- */
+    #section #about_us{
+        width:100%;
+        height:100vh;
+        background-image: none;
+        background-color: #F8F9FA;
+        /* position: relative; */
+    }
+    #section #about_us .t_title h2:after{
+        display: none;
+    }
+    #section #about_us .memory{
+        /* border:1px solid red; */
+        position: relative;
+    }
+    #section #about_us .memory>li{
+        width:400px;
+        height:150px;
+        position: static;
+    }
+    #section #about_us .memory .circle{
+        width:120px;
+        height:120px;
+    }
+    #section #about_us .memory .circle5{
+        width:120px;
+        height:120px;
+    }
+    #section #about_us .memory>li h3{
+        display: none;
+    }
+    #section #about_us .memory>li p{
+        display: none;
+    }
+    
+    /* -----------4번째 컨텐츠----------- */
+    #section #festival{
+        width:100%;
+        height:100vh;
+        position: relative;
+    }
+    #section #festival .t_title h2:after{
+        display: none;
+    }
+    /* #section #festival .f_cont{
+        height:50vh;
+    } */
+    #section #festival .f_cont>ul>li .linker{
+        display: none;
+    }
+}
+
+/* -----------태블릿---------------- */
+@media (min-width:768px) and (max-width:1023px){
+    #header .icu .logo{
+        margin-left: 0;
+    }
+    #header .gnb a{
+        height:72px;
+        /* align-items: center; */
+        display: none;
+    }
+    #header .icu .r_menu{
+        display: none;
+    }
+    #header .icu .hide{
+        display: block;
+        /* margin-right: 50px; */
+    }
+    #section #main .carousel .panel .m_pic3{
+        background-position: 45%;
+    }
+    #section #main .carousel>ul>li .m_text h1{
+        font-size: 5vw;
+    }
+    #section #main .carousel>ul>li .m_text p{
+        font-size: 3.6vw;
+        line-height: 6vh;
+        padding-left: 20px;
+    }
+    #section #main .carousel>ul>li .btn1{
+        display: none;
+    }
+    #section #main .carousel>ul>li .m_text{
+        width:70vw;
+        height:40vh;
+        /* border:1px solid red; */
+        text-align: left;
+        left:44%; top:30%
+    }
+    #section #main .navigation_bar .navigation_icons li{
+        margin-top: 8px;
+        /* border:1px solid red; */
+    }
+    #section #main .navigation_bar .navigation_icons .n_pic1{
+        width:60px;
+        height:60px;
+        margin-top: 1px;
+    }
+    #section #main .navigation_bar .navigation_icons .n_pic2{
+        width:60px;
+        height:45px;
+        margin-top: 10px;
+    }
+    #section #main .navigation_bar .navigation_icons .n_pic3{
+        width:63px;
+        height:63px;
+        /* margin-top: 3px; */
+    }
+    #section #main .navigation_bar .navigation_icons .n_pic4{
+        width:60px;
+        height:60px;
+        transform: translateY(-3px);
+    }
+    #section #main .navigation_bar .navigation_icons .n_pic5{
+        width:60px;
+        height:60px;
+    }
+    #section #main .navigation_bar .navigation_icons .n_pic6{
+        width:60px;
+        height:60px;
+    }
+    #section .number{
+        display: none;
+    }
+    #section #tour_reserv .t_title h2:after{
+        width:40px;
+        height:40px;
+        top:0; right:-25px;
+    }
+    #section #tour_reserv .detail{
+        font-size: 2.4vw;
+    } 
+    #section #tour_reserv .carousel2 .tour>li{
+        width:420px;
+        height:420px;
+        border:5px solid #c7c6c694;
+        box-sizing: border-box;
+        transition: all 0.3s;
+    }
+    #section #tour_reserv .carousel2 .tour>li:hover span{
+        display: block;
+        text-shadow: 0 0 10px #00000075
+    }
+    #section #travel_news .t_title h2:after{
+        width:40px;
+        height:40px;
+        top:0; right:-40px;
+    }
+    #section #travel_news .detail{
+        font-size: 2.4vw;
+    } 
+    #section #travel_news .btn2>li{
+        width:9vw;
+        height:36px;
+        font-size: 1.2vw;
+        text-align: center;
+        line-height: 36px;
+    }
+    #section #travel_news .article{
+        width:600px;
+        height:40vh;
+        /* border:1px solid red; */
+    }
+    #section #travel_news .article>ul>li{
+        width:280px;
+        height:280px;
+        float:left;
+        margin-right: 30px;
+        text-align: center;
+        border:5px solid #c7c6c673;
+        box-sizing: border-box;
+    }
+    #section #travel_news .article>ul>li:nth-child(2){
+        margin-right: 0;
+    }
+    #section #travel_news .article>ul>li .read{
+        display: none;
+    }
+    /* #section #about_us{
+        position: relative;
+    } */
+
+    /* ---------3번째------------- */
+    /* #section #about_us{
+        width:100%;
+        height:100vh;
+    } */
+
+    #section #about_us .t_title h2:after{
+        width:40px;
+        height:40px;
+        top:0; right:-40px;
+    }
+    #section #about_us .detail{
+        font-size: 2.4vw;
+        /* margin-bottom: 0; */
+    } 
+    #section #about_us .memory{
+        height:560px;
+        position: relative;
+        /* border:1px solid red; */
+        transform: translateY(-50px);
+    }
+    #section #about_us .memory>li .intro{
+        margin-top: 10px;
+        display: none;
+        transition: all 1s;
+    }
+    #section #about_us .memory>li:hover .intro{
+        display: block;
+    }
+    #section #about_us .memory .a_cont1{
+        top:0%; left:50%;
+        transform: translateX(-50%);
+        /* border:1px solid red; */
+    }
+    #section #about_us .memory .a_cont2{
+        top:20%; left:50%;
+        transform: translateX(-50%);
+    }
+    #section #about_us .memory .a_cont3{
+        top:40%; left:50%;
+        transform: translateX(-50%);
+    }
+    #section #about_us .memory .a_cont4{
+        top:60%; left:50%;
+        transform: translateX(-50%);
+    }
+    
+    #section #about_us .memory>li h3{
+        font-size: 2vw;
+        /* display: none; */
+    }
+    #section #about_us .memory>li p{
+        font-size: 1.6vw;
+        /* display: none; */
+    }
+    #section #about_us .memory>li{
+        width:80%;
+        height:100px;
+        display: flex;
+        justify-content: space-between;
+    }
+    #section #about_us .memory>li .circle{
+        width:90px;
+        height:90px;
+    }
+    #section #about_us .memory>li .circle5{
+        width:80px;
+        height:80px;
+        display: none;
+    }
+    #section #about_us{
+        background-image: none;
+        background-color: #F8F9FA;
+    }
+
+    /* -----------4번째------------- */
+    #section #festival .t_title h2:after{
+        width:40px;
+        height:40px;
+        top:0; right:-40px;
+    }
+    #section #festival .f_cont{
+        width:70%;
+        height:70%;
+        /* border:1px solid red; */
+    }
+    #section #festival .f_cont>ul{
+        margin: 0 auto;
+        /* border:1px solid red; */
+    }
+    #section #festival .f_cont>ul>li{
+        width:29%;
+        height:200px;
+        border-radius: 20px;
+        position: relative;
+    }
+    #section #festival .f_cont>ul>li .e_cont img{
+        width:100%;
+        height:200px;
+        border-radius: 20px;
+        padding-top: 0;
+    }
+    #section #festival .f_cont>ul>li img:hover{
+        filter: brightness(0.5);
+    }
+    #section #festival .f_cont>ul>li:hover .f_text{
+        display: block;
+        transition: all 0.5s;
+    }
+    #section #festival .f_cont>ul>li .f_text{
+        width:100%;
+        position: absolute;
+        top:50%; left:50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        display: none;
+        /* border:1px solid red; */
+    }
+    #section #festival .f_cont>ul>li .f_text h4{
+        font-size: 1.2em;
+        color: #fff;
+    }
+    #section #festival .f_cont>ul>li .f_text p{
+        font-size: 0.9em;
+        color: #ffc800;
+        letter-spacing: -3;
+    }
+    #section #festival .f_cont>ul>li .linker{
+        display: none;
+    }
+
+    /* -----------푸터------------- */
+    #footer{
+        width:100%;
+        height:100%;
+    }
+    #footer .total .l_cont p{
+        font-size: 1vw;
+    }
+    #footer .total .c_cont{
+        width:30vw;
+    }
+    #footer .total .r_cont{
+        font-size: 1vw;
+        transform: translateY(-50px);
+    }
+    #footer .total .r_cont p{
+        width:8vw;
+        /* border:1px solid red; */
+        text-align: center;
+    }
+}
